@@ -1,12 +1,38 @@
-name: 'pr metrics dashboard'
-description: '📊 Generate PR activity metrics and charts'
+name: 'PR Metrics Dashboard'
+description: '📊 Generate comprehensive PR activity metrics, charts, and insights'
 author: 'rkneela0912'
+
 inputs:
   github_token:
+    description: 'GitHub token for API access'
     required: true
+  days:
+    description: 'Number of days to analyze'
+    required: false
+    default: '30'
+  output_file:
+    description: 'Output file path for metrics report'
+    required: false
+    default: 'PR_METRICS.md'
+  include_charts:
+    description: 'Include ASCII charts in report'
+    required: false
+    default: 'true'
+
+outputs:
+  total_prs:
+    description: 'Total number of PRs'
+  merged_prs:
+    description: 'Number of merged PRs'
+  avg_time_to_merge:
+    description: 'Average time to merge (hours)'
+  report_file:
+    description: 'Generated report file path'
+
 runs:
   using: 'node20'
   main: 'dist/index.js'
+
 branding:
-  icon: 'check'
+  icon: 'bar-chart-2'
   color: 'blue'
