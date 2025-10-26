@@ -201,3 +201,7 @@ For issues: [Open an issue](https://github.com/rkneela0912/pr-metrics-dashboard/
 ---
 
 **Made with ❤️ to help teams improve their development workflow**
+
+## 💡 📊 Data-driven insights
+
+Make your workflow more efficient with automation!
